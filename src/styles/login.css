@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    direction: rtl;
+}
+
+
+
+.login{
+    width: 400px;
+    height: 500px;
+    margin: 20px auto;
+    border: 2px solid #C3C3C3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header{
+    width: 110px;
+    margin: 30px auto 0px;
+}
+
+.header .title{
+    color: #125C13;
+    font-size: 55px;
+}
+
+.header .sub_title{
+    font-size: 15px;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 46px 20px;
+}
+
+.main .title{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.main .sub_title{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+.input_section{
+    margin: 0 20px 0;
+}
+
+.input{
+    height: 45px;
+    width: 350px;
+    border-radius: 5px;
+    border: 2px solid #C3C3C3;
+    margin: 0px auto;
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+
+.btn{
+    height: 50px;
+    width: 360px;
+    margin: 50px auto 0px;
+    background: #125C13;
+    color: #fff;
+    font-size: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+
+.footer_title{
+    font-size: 10px;
+    margin: 30px ;
+}
