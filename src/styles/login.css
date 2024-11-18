@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.login-box{
+    border: 2px solid #C3C3C3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 287px auto;
+    width: 400px;
+    height: 450px;
+    border-radius: 5px;
+}
+
+
+.login-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 400px;
+    width: 110px;
+    margin: 30px auto;
+    padding: 0;
+
+}
+
+.login-title .title{
+    color: #125C13;
+    font-size: 55px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.login-title .sub-title{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.btn-box{
+    background-color: green;
+}
+
+.rules{
+    background-color: aqua;
+}
+
+
+.login-form{
+    background-color: #125C13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+    margin: 0 auto;
+}
+
+.login-form .title{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.login-form .sub-title{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.phone{
+    width: -webkit-fill-available;
+    height: 45px;
+    border: 2px solid #C3C3C3;
+    
+}
