@@ -1,6 +1,5 @@
 import axios from "axios";
 
-const doc = document
 
 const input = document.querySelector('.input')
 const btn = document.querySelector('.btn')
