@@ -4,6 +4,8 @@ const doc = document
 
 const input = document.querySelector('.input')
 const btn = document.querySelector('.btn')
+const toast = document.querySelector('.toast')
+const text = document.querySelector('.text')
 
 btn.addEventListener('click', async () => {
     try {
@@ -19,7 +21,11 @@ btn.addEventListener('click', async () => {
         }
 
     }catch (e){
-        console.log(e.response.data.message.forEach(x=>console.log(x)))
-        alert()
+        console.log(e)
+        toast.style.border = '1px solid red'
+        text.textContent = Array.isArray(e.response.data.message) ? e.response.data.message.join("\n") :e.response.data.message
+        setTimeout(()=> {
+            toast.style.display = 'none'
+        } , 2000)
     }
 })
