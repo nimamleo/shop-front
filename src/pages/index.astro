@@ -1,5 +1,6 @@
 ---
 import Header from "../components/header.astro"
+import "../styles/index.css"
 ---
 <html lang="en">
 <head>
@@ -11,8 +12,202 @@ import Header from "../components/header.astro"
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--<Header/>-->
-    <i class="fa-solid fa-magnifying-glass search_icon"></i>
-<p>asd;masdl</p>
+    <Header/>
+    <div class="index">
+        <div class="clothes">
+            <div class="top-section">
+                <ul class="filters">
+                    <li class="filter">New</li>
+                    <li class="filter">Most seller</li>
+                    <li class="filter">Most popular</li>
+                    <li class="filter">Highest price</li>
+                    <li class="filter">Lowest price</li>
+                </ul>
+                <p class="top-title">Women Clothes</p>
+            </div>
+            <div class="list">
+                <div class="cloth">
+                    <div class="cloth-top-section">
+                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
+                        <div class="heart-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="cloth-bottom-section">
+                        <div class="bottom-section-left">
+                            <p class="cloth-title">test</p>
+                            <p class="cloth-category">lorem</p>
+                        </div>
+                        <div class="bottom-section-right">
+                            <p class="price">100$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cloth">
+                    <div class="cloth-top-section">
+                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
+                        <div class="heart-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="cloth-bottom-section">
+                        <div class="bottom-section-left">
+                            <p class="cloth-title">test</p>
+                            <p class="cloth-category">lorem</p>
+                        </div>
+                        <div class="bottom-section-right">
+                            <p class="price">100$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cloth">
+                    <div class="cloth-top-section">
+                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
+                        <div class="heart-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="cloth-bottom-section">
+                        <div class="bottom-section-left">
+                            <p class="cloth-title">test</p>
+                            <p class="cloth-category">lorem</p>
+                        </div>
+                        <div class="bottom-section-right">
+                            <p class="price">100$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cloth">
+                    <div class="cloth-top-section">
+                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
+                        <div class="heart-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="cloth-bottom-section">
+                        <div class="bottom-section-left">
+                            <p class="cloth-title">test</p>
+                            <p class="cloth-category">lorem</p>
+                        </div>
+                        <div class="bottom-section-right">
+                            <p class="price">100$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cloth">
+                    <div class="cloth-top-section">
+                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
+                        <div class="heart-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="cloth-bottom-section">
+                        <div class="bottom-section-left">
+                            <p class="cloth-title">test</p>
+                            <p class="cloth-category">lorem</p>
+                        </div>
+                        <div class="bottom-section-right">
+                            <p class="price">100$</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clothe"></div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-head">
+                <i class="fa-solid fa-filter"></i>
+                <p class="title">Filter</p>
+            </div>
+            <div class="category">
+                <div class="head">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <p class="title">Category</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <p class="title">Pull & Bear</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <p class="title">Pull & Bear</p>
+                </div>
+            </div>
+            <div class="price">
+                <div class="head">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <p class="title">Price</p>
+                </div>
+                <div class="min-max">
+                    <div class="min-box">
+                        <label for="min" class="min">min</label>
+                        <input type="text" class="input" id="min">
+                    </div>
+                    <div class="max-box">
+                        <label for="max" class="max">max</label>
+                        <input type="text" class="input" id="max">
+                    </div>
+                </div>
+            </div>
+            <div class="colors">
+                <div class="head">
+                    <p class="title">Colors</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="color">
+                    <div class="pallet"></div>
+                    <div class="pallet-name">blue</div>
+                </div>
+                <div class="head">
+                    <p class="title">Colors</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="color">
+                    <div class="pallet"></div>
+                    <div class="pallet-name">blue</div>
+                </div>
+                <div class="head">
+                    <p class="title">Colors</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="color">
+                    <div class="pallet"></div>
+                    <div class="pallet-name">blue</div>
+                </div>
+                <div class="head">
+                    <p class="title">Colors</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="color">
+                    <div class="pallet"></div>
+                    <div class="pallet-name">blue</div>
+                </div>
+
+            </div>
+            <div class="size">
+                <div class="head">
+                    <p class="title">Size</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="item">
+                    <p class="title">XL</p>
+                    <p class="title">2XL</p>
+                    <p class="title">3XL</p>
+                </div>
+            </div>
+            <div class="quality">
+                <div class="item">
+                    <p class="title">Cotton</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="item">
+                    <p class="title">Cotton</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

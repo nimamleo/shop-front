@@ -1,19 +1,28 @@
 ---
 import "../styles/header.css"
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 ---
 
 <div class="header">
-    <p class="name">Elsa</p>
-    <ul class="items">
-        <li class="item">Home</li>
-        <li class="item">Home</li>
-        <li class="item">Home</li>
-    </ul>
+    <div class="left-box">
+        <p class="name">Elsa</p>
+    </div>
+    <div class="middle-box">
+        <ul class="items">
+            <li class="item">Home</li>
+            <li class="item">Home</li>
+            <li class="item">Home</li>
+            <li class="item">Home</li>
+        </ul>
+    </div>
     <div class="right-box">
-        <i class="fa-solid fa-magnifying-glass search_icon"></i>
-        <input class="search">
-        <img src="" alt="basket" class="basket">
-        <img src="" alt=profile"" class="profile">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <img src="https://marketplace.canva.com/EAFHfL_zPBk/1/0/1600w/canva-yellow-inspiration-modern-instagram-profile-picture-kpZhUIzCx_w.jpg" alt="" class="profile">
     </div>
 
 </div>
