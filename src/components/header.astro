@@ -1,28 +1,48 @@
 ---
-import "../styles/header.css"
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import "../styles/header.css";
 ---
 
-<div class="header">
-    <div class="left-box">
-        <p class="name">Elsa</p>
-    </div>
-    <div class="middle-box">
-        <ul class="items">
-            <li class="item">Home</li>
-            <li class="item">Home</li>
-            <li class="item">Home</li>
-            <li class="item">Home</li>
-        </ul>
-    </div>
-    <div class="right-box">
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+<header class="header">
+    <div class="header-content">
+        <div class="header-left">
+            <p class="logo">Elsa</p>
         </div>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <img src="https://marketplace.canva.com/EAFHfL_zPBk/1/0/1600w/canva-yellow-inspiration-modern-instagram-profile-picture-kpZhUIzCx_w.jpg" alt="" class="profile">
-    </div>
 
-</div>
+        <nav class="header-middle">
+            <ul class="nav-list" role="list">
+                <li><a href="/" class="nav-link">خانه</a></li>
+                <li><a href="/products" class="nav-link">محصولات</a></li>
+                <li><a href="/categories" class="nav-link">دسته‌بندی</a></li>
+                <li><a href="/contact" class="nav-link">تماس</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-container">
+                <input
+                        type="search"
+                        class="search-input"
+                        placeholder="جستجو..."
+                        aria-label="Search products"
+                >
+                <button type="button" class="search-button" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <button type="button" class="cart-button" aria-label="Shopping cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+
+            <button type="button" class="profile-button" aria-label="User profile">
+                <img
+                        src="/api/placeholder/38/38"
+                        alt="Profile"
+                        class="profile-image"
+                        width="38"
+                        height="38"
+                />
+            </button>
+        </div>
+    </div>
+</header>

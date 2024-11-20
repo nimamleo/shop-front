@@ -1,0 +1,93 @@
+<aside class="sidebar">
+    <div class="sidebar-head">
+        <i class="fa-solid fa-filter"></i>
+        <h2 class="title">فیلتر</h2>
+    </div>
+
+    <div class="category side">
+        <div class="head">
+            <button class="collapse-btn" aria-expanded="true" aria-controls="category-content">
+                <i class="fa-solid fa-angle-up"></i>
+                <span class="title">دسته‌بندی</span>
+            </button>
+        </div>
+        <div class="collapse-content" id="category-content">
+            <div class="item">
+                {categories.map(category => (
+                        <button class="title category-btn" type="button">{category}</button>
+                ))}
+            </div>
+        </div>
+    </div>
+
+    <div class="price side">
+        <div class="head">
+            <button class="collapse-btn" aria-expanded="true" aria-controls="price-content">
+                <i class="fa-solid fa-angle-up"></i>
+                <span class="title">قیمت</span>
+            </button>
+        </div>
+        <div class="collapse-content" id="price-content">
+            <form class="min-max">
+                <div class="min-box">
+                    <label for="min" class="min">حداقل</label>
+                    <input
+                            type="number"
+                            class="input"
+                            id="min"
+                            min="0"
+                            step="1000"
+                    >
+                </div>
+                <div class="max-box">
+                    <label for="max" class="max">حداکثر</label>
+                    <input
+                            type="number"
+                            class="input"
+                            id="max"
+                            min="0"
+                            step="1000"
+                    >
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="colors side">
+        <div class="head">
+            <button class="collapse-btn" aria-expanded="true" aria-controls="colors-content">
+                <i class="fa-solid fa-angle-up"></i>
+                <span class="title">رنگ‌ها</span>
+            </button>
+        </div>
+        <div class="collapse-content" id="colors-content">
+            <div class="color-items">
+                {colors.map(color => (
+                        <button class="color" type="button">
+                            <div
+                                    class="pallet"
+                                    style={`background-color: ${color.hex};${color.border ? ' border: 1px solid #E6E3E3;' : ''}`}
+                            ></div>
+                            <div class="pallet-name">{color.name}</div>
+                        </button>
+                ))}
+            </div>
+        </div>
+    </div>
+
+    <div class="size side">
+        <div class="head">
+            <button class="collapse-btn" aria-expanded="true" aria-controls="size-content">
+                <i class="fa-solid fa-angle-up"></i>
+                <span class="title">سایز</span>
+            </button>
+        </div>
+        <div class="collapse-content" id="size-content">
+            <div class="item">
+                {sizes.map(size => (
+                        <button class="title size-btn" type="button">{size}</button>
+                ))}
+            </div>
+        </div>
+    </div>
+</aside>

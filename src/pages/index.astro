@@ -1,213 +1,204 @@
 ---
 import Header from "../components/header.astro"
 import "../styles/index.css"
+
+// You might want to fetch this data from an API or store
+const products = [
+    {
+        id: 1,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    },
+    {
+        id: 1,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    },
+    {
+        id: 1,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    },    {
+        id: 1,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    },    {
+        id: 1,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    },
+    // Add more products as needed
+];
+
+const sizes = ["XL", "2XL", "3XL"];
+const categories = ["Cotton", "Lorem", "Ipsum", "Polymer", "Plys"];
+const colors = [
+    { name: "Orange", hex: "Orange" },
+    { name: "Red", hex: "#E94646" },
+    { name: "Black", hex: "#292D32" },
+    { name: "Purple", hex: "#8334DF" },
+    { name: "Green", hex: "#47BC4E" },
+    { name: "Brown", hex: "#D67F3B" },
+    { name: "White", hex: "#FFFFFF", border: true },
+    { name: "Dark Blue", hex: "#345EFF" },
+    { name: "Light Blue", hex: "#32B5F9" },
+    { name: "Pink", hex: "#F02A7F" },
+    { name: "Gray", hex: "#ADB7D2" },
+    { name: "Yellow", hex: "#F3C331" }
+];
 ---
-<html lang="en">
+
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Women's Clothing Store</title>
 </head>
 <body>
-    <Header/>
-    <div class="index">
-        <div class="clothes">
-            <div class="top-section">
-                <ul class="filters">
-                    <li class="filter">New</li>
-                    <li class="filter">Most seller</li>
-                    <li class="filter">Most popular</li>
-                    <li class="filter">Highest price</li>
-                    <li class="filter">Lowest price</li>
-                </ul>
-                <p class="top-title">Women Clothes</p>
-            </div>
-            <div class="list">
-                <div class="cloth">
-                    <div class="cloth-top-section">
-                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
-                        <div class="heart-section">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="cloth-bottom-section">
-                        <div class="bottom-section-left">
-                            <p class="cloth-title">test</p>
-                            <p class="cloth-category">lorem</p>
-                        </div>
-                        <div class="bottom-section-right">
-                            <p class="price">100$</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cloth">
-                    <div class="cloth-top-section">
-                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
-                        <div class="heart-section">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="cloth-bottom-section">
-                        <div class="bottom-section-left">
-                            <p class="cloth-title">test</p>
-                            <p class="cloth-category">lorem</p>
-                        </div>
-                        <div class="bottom-section-right">
-                            <p class="price">100$</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cloth">
-                    <div class="cloth-top-section">
-                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
-                        <div class="heart-section">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="cloth-bottom-section">
-                        <div class="bottom-section-left">
-                            <p class="cloth-title">test</p>
-                            <p class="cloth-category">lorem</p>
-                        </div>
-                        <div class="bottom-section-right">
-                            <p class="price">100$</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cloth">
-                    <div class="cloth-top-section">
-                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
-                        <div class="heart-section">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="cloth-bottom-section">
-                        <div class="bottom-section-left">
-                            <p class="cloth-title">test</p>
-                            <p class="cloth-category">lorem</p>
-                        </div>
-                        <div class="bottom-section-right">
-                            <p class="price">100$</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cloth">
-                    <div class="cloth-top-section">
-                        <img src="https://c961156.parspack.net/images/tshirt" alt="" class="image">
-                        <div class="heart-section">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="cloth-bottom-section">
-                        <div class="bottom-section-left">
-                            <p class="cloth-title">test</p>
-                            <p class="cloth-category">lorem</p>
-                        </div>
-                        <div class="bottom-section-right">
-                            <p class="price">100$</p>
-                        </div>
-                    </div>
-                </div>
+<Header/>
+<main class="index">
+    <div class="clothes">
+        <section class="top-section">
+            <ul class="filters" role="list">
+                <li><button class="filter" type="button">جدید</button></li>
+                <li><button class="filter" type="button">پرفروش‌ترین</button></li>
+                <li><button class="filter" type="button">محبوب‌ترین</button></li>
+                <li><button class="filter" type="button">گران‌ترین</button></li>
+                <li><button class="filter" type="button">ارزان‌ترین</button></li>
+            </ul>
+            <h1 class="top-title">لباس زنانه</h1>
+        </section>
 
-            </div>
-            <div class="clothe"></div>
-        </div>
-        <div class="sidebar">
-            <div class="sidebar-head">
-                <i class="fa-solid fa-filter"></i>
-                <p class="title">Filter</p>
-            </div>
-            <div class="category">
-                <div class="head">
-                    <i class="fa-solid fa-angle-up"></i>
-                    <p class="title">Category</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <p class="title">Pull & Bear</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <p class="title">Pull & Bear</p>
-                </div>
-            </div>
-            <div class="price">
-                <div class="head">
-                    <i class="fa-solid fa-angle-up"></i>
-                    <p class="title">Price</p>
-                </div>
-                <div class="min-max">
-                    <div class="min-box">
-                        <label for="min" class="min">min</label>
-                        <input type="text" class="input" id="min">
-                    </div>
-                    <div class="max-box">
-                        <label for="max" class="max">max</label>
-                        <input type="text" class="input" id="max">
-                    </div>
-                </div>
-            </div>
-            <div class="colors">
-                <div class="head">
-                    <p class="title">Colors</p>
-                    <i class="fa-solid fa-angle-up"></i>
-                </div>
-                <div class="color">
-                    <div class="pallet"></div>
-                    <div class="pallet-name">blue</div>
-                </div>
-                <div class="head">
-                    <p class="title">Colors</p>
-                    <i class="fa-solid fa-angle-up"></i>
-                </div>
-                <div class="color">
-                    <div class="pallet"></div>
-                    <div class="pallet-name">blue</div>
-                </div>
-                <div class="head">
-                    <p class="title">Colors</p>
-                    <i class="fa-solid fa-angle-up"></i>
-                </div>
-                <div class="color">
-                    <div class="pallet"></div>
-                    <div class="pallet-name">blue</div>
-                </div>
-                <div class="head">
-                    <p class="title">Colors</p>
-                    <i class="fa-solid fa-angle-up"></i>
-                </div>
-                <div class="color">
-                    <div class="pallet"></div>
-                    <div class="pallet-name">blue</div>
-                </div>
-
-            </div>
-            <div class="size">
-                <div class="head">
-                    <p class="title">Size</p>
-                    <i class="fa-solid fa-angle-up"></i>
-                </div>
-                <div class="item">
-                    <p class="title">XL</p>
-                    <p class="title">2XL</p>
-                    <p class="title">3XL</p>
-                </div>
-            </div>
-            <div class="quality">
-                <div class="item">
-                    <p class="title">Cotton</p>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-                <div class="item">
-                    <p class="title">Cotton</p>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-            </div>
+        <div class="list">
+            {products.map(product => (
+                    <article class="cloth">
+                        <div class="cloth-top-section">
+                            <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    class="image"
+                                    loading="lazy"
+                            >
+                            <button
+                                    type="button"
+                                    class="heart-section"
+                                    aria-label="Add to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="cloth-bottom-section">
+                            <div class="bottom-section-left">
+                                <h2 class="cloth-title">{product.title}</h2>
+                                <p class="cloth-category">{product.category}</p>
+                            </div>
+                            <div class="bottom-section-right">
+                                <p class="price">{product.price}$</p>
+                            </div>
+                        </div>
+                    </article>
+            ))}
         </div>
     </div>
+
+    <aside class="sidebar">
+        <div class="sidebar-head">
+            <i class="fa-solid fa-filter"></i>
+            <h2 class="title">فیلتر</h2>
+        </div>
+
+        <div class="category side">
+            <div class="head">
+                <button class="collapse-btn" aria-expanded="true">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <span class="title">دسته‌بندی</span>
+                </button>
+            </div>
+            <div class="item">
+                {categories.map(category => (
+                        <button class="title category-btn" type="button">{category}</button>
+                ))}
+            </div>
+        </div>
+
+        <div class="price side">
+            <div class="head">
+                <button class="collapse-btn" aria-expanded="true">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <span class="title">قیمت</span>
+                </button>
+            </div>
+            <form class="min-max">
+                <div class="min-box">
+                    <label for="min" class="min">حداقل</label>
+                    <input
+                            type="number"
+                            class="input"
+                            id="min"
+                            min="0"
+                            step="1000"
+                    >
+                </div>
+                <div class="max-box">
+                    <label for="max" class="max">حداکثر</label>
+                    <input
+                            type="number"
+                            class="input"
+                            id="max"
+                            min="0"
+                            step="1000"
+                    >
+                </div>
+            </form>
+        </div>
+
+        <div class="colors side">
+            <div class="head">
+                <button class="collapse-btn" aria-expanded="true">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <span class="title">رنگ‌ها</span>
+                </button>
+            </div>
+            <div class="color-items">
+                {colors.map(color => (
+                        <button class="color" type="button">
+                            <div
+                                    class="pallet"
+                                    style={`background-color: ${color.hex};${color.border ? ' border: 1px solid #E6E3E3;' : ''}`}
+                            ></div>
+                            <div class="pallet-name">{color.name}</div>
+                        </button>
+                ))}
+            </div>
+        </div>
+
+        <div class="size side">
+            <div class="head">
+                <button class="collapse-btn" aria-expanded="true">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <span class="title">سایز</span>
+                </button>
+            </div>
+            <div class="item">
+                {sizes.map(size => (
+                        <button class="title size-btn" type="button">{size}</button>
+                ))}
+            </div>
+        </div>
+    </aside>
+</main>
 
 </body>
 </html>
