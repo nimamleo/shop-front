@@ -12,32 +12,33 @@ const products = [
         image: "https://c961156.parspack.net/images/tshirt"
     },
     {
-        id: 1,
+        id: 2,
         title: "Test Product",
         category: "Lorem",
         price: 100,
         image: "https://c961156.parspack.net/images/tshirt"
     },
     {
-        id: 1,
-        title: "Test Product",
-        category: "Lorem",
-        price: 100,
-        image: "https://c961156.parspack.net/images/tshirt"
-    },    {
-        id: 1,
-        title: "Test Product",
-        category: "Lorem",
-        price: 100,
-        image: "https://c961156.parspack.net/images/tshirt"
-    },    {
-        id: 1,
+        id: 3,
         title: "Test Product",
         category: "Lorem",
         price: 100,
         image: "https://c961156.parspack.net/images/tshirt"
     },
-    // Add more products as needed
+    {
+        id: 4,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    },
+    {
+        id: 5,
+        title: "Test Product",
+        category: "Lorem",
+        price: 100,
+        image: "https://c961156.parspack.net/images/tshirt"
+    }
 ];
 
 const sizes = ["XL", "2XL", "3XL"];
@@ -72,11 +73,11 @@ const colors = [
     <div class="clothes">
         <section class="top-section">
             <ul class="filters" role="list">
-                <li><button class="filter" type="button">جدید</button></li>
-                <li><button class="filter" type="button">پرفروش‌ترین</button></li>
-                <li><button class="filter" type="button">محبوب‌ترین</button></li>
-                <li><button class="filter" type="button">گران‌ترین</button></li>
-                <li><button class="filter" type="button">ارزان‌ترین</button></li>
+                <li><button class="filter" type="button" data-filter="newest">جدید</button></li>
+                <li><button class="filter" type="button" data-filter="bestsellers">پرفروش‌ترین</button></li>
+                <li><button class="filter" type="button" data-filter="popular">محبوب‌ترین</button></li>
+                <li><button class="filter" type="button" data-filter="expensive">گران‌ترین</button></li>
+                <li><button class="filter" type="button" data-filter="cheapest">ارزان‌ترین</button></li>
             </ul>
             <h1 class="top-title">لباس زنانه</h1>
         </section>
@@ -200,5 +201,7 @@ const colors = [
     </aside>
 </main>
 
+<!--<script src="sidebar-collapse-animated.js"></script>-->
+<script src="../scripts/index.js"></script>
 </body>
 </html>

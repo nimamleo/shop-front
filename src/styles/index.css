@@ -82,6 +82,8 @@
 
 .filter:active {
     transform: translateY(0);
+    background-color: #292D32;
+
 }
 
 .filter.selected {
@@ -244,6 +246,20 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.collapse-btn .title{
+    color: white;
+}
+
+.min-box .min{
+    color: white;
+}
+
+.max-box .max{
+    color: white;
+}
+
+
+
 /* Price inputs */
 .min-max {
     display: flex;
@@ -266,7 +282,6 @@
     color: #666;
     font-weight: 500;
 }
-
 .input {
     width: 100%;
     padding: 0.75rem;
@@ -276,19 +291,19 @@
     transition: all 0.3s ease;
     font-size: 0.95rem;
     background-color: #F7F7F7;
-    color: #292D32;
+    color: #666;
 }
 
 .input:hover {
-    border-color: #d4d4d4;
+    border-color: #999;
     background-color: #F7F7F7;
 }
 
 .input:focus {
     outline: none;
-    border-color: #292D32;
+    border-color: #666;
     background-color: #F7F7F7;
-    box-shadow: 0 0 0 3px rgba(41, 45, 50, 0.1);
+    box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.1);
 }
 
 /* Remove spinner buttons from number input */
@@ -324,7 +339,7 @@
 .pallet {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -341,6 +356,30 @@
 .pallet-name {
     font-size: 0.875rem;
     color: #666;
+}
+
+/* Add to your existing CSS */
+.item,
+.color-items,
+.min-max {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.color-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+/* Add this to ensure color-items maintains grid layout when visible */
+.color-items[data-visible="true"] {
+    display: grid;
+}
+
+.color-items[data-visible="false"] {
+    display: none;
 }
 
 /* Responsive */

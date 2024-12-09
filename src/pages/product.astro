@@ -1,0 +1,80 @@
+---
+import Header from "../components/header.astro";
+const id = 1
+import "../styles/product.css"
+
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Detail</title>
+
+</head>
+<body>
+    <Header />
+    <main class="product-container">
+        <div class="product-images">
+            <div class="thumbnail-container">
+                <img src="https://c961156.parspack.net/images/tshirt" class="thumbnail" alt="Product thumbnail 1" />
+                <img src="https://c961156.parspack.net/images/tshirt" class="thumbnail" alt="Product thumbnail 2" />
+                <img src="https://c961156.parspack.net/images/tshirt" class="thumbnail" alt="Product thumbnail 3" />
+            </div>
+            <div class="main-image">
+                <img src="https://c961156.parspack.net/images/tshirt" alt="Product main image" />
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">Raven Top With Colored Leaves Design</h1>
+            
+            <div class="rating">
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <span>4.5</span>
+                <span>(120 comments)</span>
+            </div>
+
+            <div class="size-selector">
+                <label>Select Size</label>
+                <div class="size-options">
+                    <button class="size-option">XS</button>
+                    <button class="size-option">S</button>
+                    <button class="size-option">M</button>
+                    <button class="size-option selected">L</button>
+                    <button class="size-option">XL</button>
+                </div>
+            </div>
+
+            <div class="color-selector">
+                <label>Colors Available</label>
+                <div class="color-options">
+                    <div class="color-option" style="background-color: #000000;"></div>
+                    <div class="color-option" style="background-color: #FFD700;"></div>
+                    <div class="color-option" style="background-color: #FF69B4;"></div>
+                    <div class="color-option" style="background-color: #8B0000;"></div>
+                </div>
+            </div>
+
+            <div class="price">$65.00</div>
+
+            <button class="add-to-cart">Add to cart</button>
+
+            <div class="features">
+                <div class="feature">
+                    <img src="/icons/size.svg" alt="Size guide" />
+                    <span>Size & Fit</span>
+                </div>
+                <div class="feature">
+                    <img src="/icons/shipping.svg" alt="Shipping" />
+                    <span>Free Shipping & Returns</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
