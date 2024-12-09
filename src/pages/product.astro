@@ -1,80 +1,133 @@
 ---
-import Header from "../components/header.astro";
-const id = 1
+import Header from "../components/header.astro"
 import "../styles/product.css"
 
+const products = [
+    {
+        id: 1,
+        title: "Raven Top With Colored Leaves Design",
+        category: "Women's Top",
+        price: 65,
+        image: "https://c961156.parspack.net/images/tshirt"
+    }
+];
+
+const sizes = ["XS", "S", "M", "L", "XL", "2XL"];
+const colors = [
+    { name: "Black", hex: "#292D32" },
+    { name: "Yellow", hex: "#F3C331" },
+    { name: "Pink", hex: "#F02A7F" },
+    { name: "Dark Red", hex: "#8B0000" }
+];
 ---
 
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Product Detail</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>جزئیات محصول</title>
 </head>
 <body>
-    <Header />
-    <main class="product-container">
-        <div class="product-images">
-            <div class="thumbnail-container">
-                <img src="https://c961156.parspack.net/images/tshirt" class="thumbnail" alt="Product thumbnail 1" />
-                <img src="https://c961156.parspack.net/images/tshirt" class="thumbnail" alt="Product thumbnail 2" />
-                <img src="https://c961156.parspack.net/images/tshirt" class="thumbnail" alt="Product thumbnail 3" />
-            </div>
-            <div class="main-image">
-                <img src="https://c961156.parspack.net/images/tshirt" alt="Product main image" />
-            </div>
+<Header/>
+<main class="product-container">
+    <div class="product-images">
+        <div class="thumbnail-container">
+            {products.map(product => (
+                    <>
+                        <img
+                                src={product.image}
+                                class="thumbnail"
+                                alt={`${product.title} thumbnail`}
+                        />
+                        <img
+                                src={product.image}
+                                class="thumbnail"
+                                alt={`${product.title} thumbnail`}
+                        />
+                        <img
+                                src={product.image}
+                                class="thumbnail"
+                                alt={`${product.title} thumbnail`}
+                        />
+                    </>
+            ))}
         </div>
-
-        <div class="product-info">
-            <h1 class="product-title">Raven Top With Colored Leaves Design</h1>
-            
-            <div class="rating">
-                <div class="stars">
-                    ★★★★★
-                </div>
-                <span>4.5</span>
-                <span>(120 comments)</span>
-            </div>
-
-            <div class="size-selector">
-                <label>Select Size</label>
-                <div class="size-options">
-                    <button class="size-option">XS</button>
-                    <button class="size-option">S</button>
-                    <button class="size-option">M</button>
-                    <button class="size-option selected">L</button>
-                    <button class="size-option">XL</button>
-                </div>
-            </div>
-
-            <div class="color-selector">
-                <label>Colors Available</label>
-                <div class="color-options">
-                    <div class="color-option" style="background-color: #000000;"></div>
-                    <div class="color-option" style="background-color: #FFD700;"></div>
-                    <div class="color-option" style="background-color: #FF69B4;"></div>
-                    <div class="color-option" style="background-color: #8B0000;"></div>
-                </div>
-            </div>
-
-            <div class="price">$65.00</div>
-
-            <button class="add-to-cart">Add to cart</button>
-
-            <div class="features">
-                <div class="feature">
-                    <img src="/icons/size.svg" alt="Size guide" />
-                    <span>Size & Fit</span>
-                </div>
-                <div class="feature">
-                    <img src="/icons/shipping.svg" alt="Shipping" />
-                    <span>Free Shipping & Returns</span>
-                </div>
-            </div>
+        <div class="main-image">
+            {products.map(product => (
+                    <img
+                            src={product.image}
+                            alt={product.title}
+                    />
+            ))}
         </div>
-    </main>
+    </div>
+
+    <div class="product-info">
+        {products.map(product => (
+                <>
+                    <h1 class="product-title">{product.title}</h1>
+
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span>4.5</span>
+                        <span>(120 نظر)</span>
+                    </div>
+
+                    <div class="size-selector">
+                        <label>انتخاب سایز</label>
+                        <div class="size-options">
+                            {sizes.map(size => (
+                                    <button class={`size-option ${size === 'L' ? 'selected' : ''}`}>
+                                        {size}
+                                    </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div class="color-selector">
+                        <label>رنگ‌های موجود</label>
+                        <div class="color-options">
+                            {colors.map(color => (
+                                    <div
+                                            class="color-option"
+                                            style={`background-color: ${color.hex}`}
+                                            title={color.name}
+                                    ></div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div class="price-container">
+                        <div class="price">
+                            {product.price}$
+                        </div>
+                        <button class="add-to-cart">
+                            افزودن به سبد
+                        </button>
+                    </div>
+
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fa-solid fa-ruler"></i>
+                            <span>راهنمای سایز</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fa-solid fa-truck"></i>
+                            <span>ارسال رایگان</span>
+                        </div>
+                    </div>
+                </>
+        ))}
+    </div>
+</main>
 
 </body>
 </html>
