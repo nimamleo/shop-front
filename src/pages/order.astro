@@ -1,5 +1,4 @@
 ---
-import Header from "../components/header.astro"
 import "../styles/order.css"
 
 const orders = [
@@ -111,7 +110,7 @@ const statusLabels = {
                             <td>{order.address}</td>
                             <td>{order.date}</td>
                             <td>${order.price.toFixed(2)}</td>
-                            <td><span class={`status ${order.status}`}>statusLabels[0]</span></td>
+                            <td><span class={`status ${order.status}`}>{statusLabels.cancelled}</span></td>
                         </tr>
                 ))}
                 </tbody>
