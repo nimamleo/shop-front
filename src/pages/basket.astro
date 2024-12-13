@@ -1,0 +1,173 @@
+---
+import Header from "../components/header.astro"
+import "../styles/basket.css"
+
+const cartItems = [
+    {
+        id: 1,
+        title: "Test Product",
+        brand: "Lorem",
+        description: "Short description of product written here",
+        image: "https://c961156.parspack.net/images/tshirt",
+        price: 100,
+        quantity: 1,
+        color: "Black",
+        size: "M",
+        quality: "Premium",
+        madeIn: "Iran"
+    },
+    {
+        id: 2,
+        title: "Another Product",
+        brand: "Ipsum",
+        description: "Another short product description",
+        image: "https://c961156.parspack.net/images/tshirt",
+        price: 150,
+        quantity: 2,
+        color: "White",
+        size: "L",
+        quality: "Standard",
+        madeIn: "Turkey"
+    }
+];
+
+const colors = [
+    { name: "Black", hex: "#292D32" },
+    { name: "White", hex: "#FFFFFF", border: true }
+];
+
+const sizes = [
+    { name: "XS" },
+    { name: "S" },
+    { name: "M" },
+    { name: "L" },
+    { name: "XL" }
+];
+
+const qualities = [
+    { name: "Standard" },
+    { name: "Premium" },
+    { name: "Luxury" }
+];
+
+const countries = [
+    { name: "Iran" },
+    { name: "Turkey" },
+    { name: "China" },
+    { name: "India" }
+];
+
+const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+---
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>سبد خرید</title>
+</head>
+<body>
+<Header/>
+<div class="cart-container">
+    <h1>سبد خرید <span>({totalItems} کالا)</span></h1>
+    <div class="cart-items">
+        {cartItems.map(item => (
+                <div class="cart-item" data-item-id={item.id}>
+                    <img
+                            src={item.image}
+                            alt={item.title}
+                            class="cart-item-image"
+                    >
+                    <div class="item-details">
+                        <h2 class="item-title">{item.title}</h2>
+                        <p class="item-brand">{item.brand}</p>
+                        <p class="item-description">{item.description}</p>
+                        <div class="item-options">
+                            <div class="color-selector">
+                                <label>رنگ:</label>
+                                <select class="input color-select">
+                                    {colors.map(color => (
+                                            <option
+                                                    value={color.name}
+                                                    selected={color.name === item.color}
+                                            >
+                                                {color.name}
+                                            </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div class="size-selector">
+                                <label>سایز:</label>
+                                <select class="input size-select">
+                                    {sizes.map(size => (
+                                            <option
+                                                    value={size.name}
+                                                    selected={size.name === item.size}
+                                            >
+                                                {size.name}
+                                            </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div class="quality-selector">
+                                <label>کیفیت:</label>
+                                <select class="input quality-select">
+                                    {qualities.map(quality => (
+                                            <option
+                                                    value={quality.name}
+                                                    selected={quality.name === item.quality}
+                                            >
+                                                {quality.name}
+                                            </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div class="country-selector">
+                                <label>ساخت:</label>
+                                <select class="input country-select">
+                                    {countries.map(country => (
+                                            <option
+                                                    value={country.name}
+                                                    selected={country.name === item.madeIn}
+                                            >
+                                                {country.name}
+                                            </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease-btn" aria-label="کاهش تعداد">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input
+                                    type="number"
+                                    class="quantity-input"
+                                    value={item.quantity}
+                                    min="1"
+                                    readonly
+                            >
+                            <button class="quantity-btn increase-btn" aria-label="افزایش تعداد">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="price">{item.price}$</p>
+                    </div>
+                </div>
+        ))}
+    </div>
+    <div class="cart-footer">
+        <a href="/" class="continue-shopping">ادامه خرید</a>
+        <div class="checkout">
+            <p>مجموع: <span id="total-price">{totalPrice}$</span></p>
+            <button class="proceed-checkout">تکمیل خرید</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

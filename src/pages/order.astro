@@ -1,0 +1,133 @@
+---
+import Header from "../components/header.astro"
+import "../styles/order.css"
+
+const orders = [
+    {
+        id: "#78523215",
+        productName: "Smart Watch",
+        phone: "+1 (555) 123-4567",
+        address: "381 Sherwood Forest ",
+        date: "20/03/2021",
+        price: 376.00,
+        status: "complete",
+        image: "https://c961156.parspack.net/images/tshirt"
+    },
+    {
+        id: "#78523216",
+        productName: "Headphones",
+        phone: "+1 (555) 987-6543",
+        address: "836 Elgin St. Celina",
+        date: "21/03/2021",
+        price: 276.00,
+        status: "pending",
+        image: "https://c961156.parspack.net/images/tshirt"
+    },
+    {
+        id: "#78523217",
+        productName: "iPhone Pro",
+        phone: "+1 (555) 456-7890",
+        address: "8528 Preston Rd. Inglewood",
+        date: "19/04/2021",
+        price: 999.00,
+        status: "cancelled",
+        image: "https://c961156.parspack.net/images/tshirt"
+    }
+];
+
+const statusLabels = {
+    complete: "Complete",
+    pending: "Pending",
+    cancelled: "Cancelled"
+}
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Dashboard Orders</title>
+</head>
+<body>
+<main class="index">
+    <aside class="sidebar">
+        <h1>E-Shop</h1>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="upgrade">
+            <p>Upgrade your plan to get more features!</p>
+        </div>
+    </aside>
+
+    <div class="clothes">
+        <section class="top-section">
+            <ul class="filters" role="list">
+                <li>
+                    <select class="filter">
+                        <option>All Orders</option>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>Cancelled</option>
+                    </select>
+                </li>
+                <li>
+                    <select class="filter">
+                        <option>March - April 2021</option>
+                        <option>January - February 2021</option>
+                    </select>
+                </li>
+            </ul>
+            <h1 class="top-title">Orders</h1>
+        </section>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                {orders.map(order => (
+                        <tr>
+                            <td><img src={order.image} alt={order.productName} class="product-image" /></td>
+                            <td>{order.id}</td>
+                            <td>{order.productName}</td>
+                            <td>{order.phone}</td>
+                            <td>{order.address}</td>
+                            <td>{order.date}</td>
+                            <td>${order.price.toFixed(2)}</td>
+                            <td><span class={`status ${order.status}`}>statusLabels[0]</span></td>
+                        </tr>
+                ))}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button>Previous</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+        </div>
+    </div>
+</main>
+
+<script src="../scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* Inherit from existing design system */
+@import './index.css';
+
+.cart-container {
+    width: min(100%, 1440px);
+    margin: var(--spacing-md) auto;
+    padding: 0 var(--spacing-sm);
+    background-color: white;
+}
+
+.cart-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-container h1 span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.cart-items {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cart-item:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.cart-item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border);
+    margin-left: var(--spacing-md);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.item-brand {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.item-description {
+    color: #666;
+    margin-bottom: var(--spacing-sm);
+}
+
+.item-options {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.quantity-selector,
+.color-selector,
+.size-selector,
+.quality-selector,
+.country-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 100px;
+}
+
+.item-options label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.input {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+}
+
+.item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-sm);
+}
+
+.item-price p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #292D32;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) 0;
+}
+
+.continue-shopping {
+    text-decoration: none;
+    color: #292D32;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.continue-shopping:hover {
+    color: #666;
+}
+
+.checkout p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.proceed-checkout {
+    background-color: #292D32;
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.proceed-checkout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Quantity control styles */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.quantity-btn {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.quantity-btn i {
+    color: #292D32;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    padding: var(--spacing-xs);
+    background: none;
+}
+
+.quantity-input:focus {
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item-image {
+        margin-bottom: var(--spacing-sm);
+        margin-left: 0;
+    }
+
+    .item-options {
+        flex-direction: column;
+    }
+
+    .cart-footer {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}

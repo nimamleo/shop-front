@@ -1,0 +1,5 @@
+services:
+  front:
+    image: astro:v1
+    ports:
+      - 4321:4321
